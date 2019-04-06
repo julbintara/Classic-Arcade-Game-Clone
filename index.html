@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>Effective JavaScript: Frogger</title>
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Add Google Fonts font family "Shrikhand" for headings and "Shadows Into
+		Light" for simple text paragraphs. -->
+		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Shrikhand" rel="stylesheet">
+</head>
+<body>
+		<div class="instructions">
+				<h1 class="heading">Instructions</h1>
+				<p class="simple-text">Use the arrow keys to move the player. Reach the water line to win
+				the game. Attention: Don't collide with the bugs! Then you have to start
+				over again!</p>
+				<button class="button" id="restart">Play again!</button>
+		</div>
+		<!-- The code for the modal box was taken from the website
+		https://sabe.io/tutorials/how-to-create-modal-popup-box and slightly
+		modified for the needs of this project. -->
+		<!-- <button class="trigger">Click here to trigger the modal!</button> -->
+		<div class="modal">
+			<div class="modal-content">
+					<span class="close-button">&times;</span>
+					<h1 class="heading">Congratulations! You win! Do you want to play again?</h1>
+					<button class="button" id="restart-modal">Play again!</button>
+					<button class="button" id="quit-game">No thanks!</button>
+			</div>
+		</div>
+		<script src="js/resources.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/engine.js"></script>
+</body>
+</html>

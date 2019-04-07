@@ -1,66 +1,143 @@
 body {
-		text-align: center;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: rgb(190, 136, 26);
 }
 
-.heading {
-		font-family: 'Shrikhand', cursive;
+.header {
+    color: rgb(190, 188, 188);
+    animation-name: pulse;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+}
+.header h1:hover, button:hover {
+    animation-name: pulse;
+    -webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .90s;
 }
 
-.simple-text {
-		font-family: 'Shadows Into Light', cursive;
-		font-size: 1.5rem;
+canvas {
+    margin-top: -4em; 
 }
 
-.button {
-		font-family: 'Shadows Into Light', cursive;
-		font-size: 1.2rem;
+.overlay {
+    background: rgba(54, 53, 53, 0.7);
+    transition: opacity 500ms;
+    width: 505px;
+    height: 538px;
+    position: absolute;
+    top: 91px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
-/* The CSS style for the modal box is taken from
- * https://sabe.io/tutorials/how-to-create-modal-popup-box
- */
-
-.modal {
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.5);
-		opacity: 0;
-		visibility: hidden;
-		transform: scale(1.1);
-		transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+.start-game {
+    font-family: 'Alegreya', serif;
+    position: absolute;
+    background-color: #D4F4DD;
+    border-radius: 5px; 
+    left: 0;
+    right: 0;
+    top: 153px;
+    width: 420px;
+    height: 410px;
+    margin: 0 auto;
+    padding: 1em 2em;
 }
 
-.modal-content {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		background-color: white;
-		padding: 1rem 1.5rem;
-		width: 24rem;
-		border-radius: 0.5rem;
+.start-game h1, h3, h4 {
+    font-weight: bold; 
 }
 
-.close-button {
-		float: right;
-		width: 1.5rem;
-		line-height: 1.5rem;
-		text-align: center;
-		cursor: pointer;
-		border-radius: 0.25rem;
-		background-color: lightgray;
+.start-game h4 {
+    color: #E3170A;
 }
 
-.close-button:hover {
-		background-color: darkgray;
+.start-game button {
+    background-color: royalblue;
+    border: none;
+    border-radius: 3px;
+    padding: 7px 15px;
+    font-size: 20px;
+    color: #fff;
 }
 
-.show-modal {
-		opacity: 1;
-		visibility: visible;
-		transform: scale(1.0);
-		transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+.hide {
+	visibility: hidden;
+	opacity: 0 !important;
+}
+.show {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.game-over {
+    font-family: 'Alegreya', serif;
+    position: absolute;
+    background-color: #990005;
+    border-radius: 5px; 
+    left: 0;
+    right: 0;
+    top: 153px;
+    width: 347px;
+    height: 303px;
+    margin: 0 auto;
+    padding: 3em 3em;
+    color: #fff;
+    visibility: hidden;
+}
+
+.game-over button {
+    background-color: royalblue;
+    border: none;
+    border-radius: 3px;
+    padding: 7px 15px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 2em;
+}
+
+.winner {
+    font-family: 'Alegreya', serif;
+    position: absolute;
+    background-color: #0D4B9B;
+    border-radius: 5px; 
+    left: 0;
+    right: 0;
+    top: 153px;
+    width: 347px;
+    height: 303px;
+    margin: 0 auto;
+    padding: 3em 3em;
+    color: #fff;
+    visibility: hidden;
+}
+
+.winner button {
+    background-color: #D62246;
+    border: none;
+    border-radius: 3px;
+    padding: 7px 15px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 2em;
+}
+
+/* animations  */
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
 }
